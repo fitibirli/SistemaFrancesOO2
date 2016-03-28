@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+      <feriado><anio>2015</anio><mes>0</mes><dia>1</dia></feriado>	//1° de Enero
+    <feriado><anio>2015</anio><mes>1</mes><dia>16</dia></feriado>	//Carnaval
+    <feriado><anio>2015</anio><mes>1</mes><dia>17</dia></feriado>	//Carnaval
+    <feriado><anio>2015</anio><mes>2</mes><dia>23</dia></feriado>	//Puente turístico
+    <feriado><anio>2015</anio><mes>2</mes><dia>24</dia></feriado>	//Dia nacional de la Verdad, la Memoria y la Justicia
+    <feriado><anio>2015</anio><mes>3</mes><dia>2</dia></feriado>	//Día del veterano y los caidos en Malvinas
+    <feriado><anio>2015</anio><mes>3</mes><dia>3</dia></feriado>	//Viernes Santo
+    <feriado><anio>2015</anio><mes>4</mes><dia>1</dia></feriado>	//Día del trabajador
+ 	<feriado><anio>2015</anio><mes>4</mes><dia>2</dia></feriado>	//Revolución de Mayo
+ 	<feriado><anio>2015</anio><mes>5</mes><dia>20</dia></feriado>	//Día Paso a la Inmortalidad del General Manuel Belgrano
+ 	<feriado><anio>2015</anio><mes>6</mes><dia>9</dia></feriado>		//Día de la Independencia
+ 	<feriado><anio>2015</anio><mes>7</mes><dia>17</dia></feriado>	//Paso a la Inmortalidad del Gral. José de San Martín
+ 	<feriado><anio>2015</anio><mes>9</mes><dia>12</dia></feriado>	//Día del respeto a la diversidad cultural
+ 	<feriado><anio>2015</anio><mes>10</mes><dia>23</dia></feriado>	//Día de la soberanía Nacional
+ 	<feriado><anio>2015</anio><mes>11</mes><dia>7</dia></feriado>	//Puente turístico
+ 	<feriado><anio>2015</anio><mes>11</mes><dia>8</dia></feriado>	//Inmaculada concepción de María
+ 	<feriado><anio>2015</anio><mes>11</mes><dia>25</dia></feriado>	//Navidad
+ 	<feriado><anio>2016</anio><mes>0</mes><dia>1</dia></feriado>	//1° de Enero
+    <feriado><anio>2016</anio><mes>1</mes><dia>8</dia></feriado>	//Carnaval
+    <feriado><anio>2016</anio><mes>1</mes><dia>9</dia></feriado>	//Carnaval
+    <feriado><anio>2016</anio><mes>2</mes><dia>24</dia></feriado>	//Dia nacional de la Verdad
+    <feriado><anio>2016</anio><mes>2</mes><dia>25</dia></feriado>	//Viernes Santo, la Memoria y la Justicia
+    <feriado><anio>2016</anio><mes>3</mes><dia>2</dia></feriado>	//Día del veterano y los caidos en Malvinas
+    <feriado><anio>2016</anio><mes>3</mes><dia>3</dia></feriado>	//Viernes Santo
+    <feriado><anio>2016</anio><mes>4</mes><dia>1</dia></feriado>	//Día del trabajador
+ 	<feriado><anio>2016</anio><mes>4</mes><dia>25</dia></feriado>	//Revolución de Mayo
+ 	<feriado><anio>2016</anio><mes>5</mes><dia>20</dia></feriado>	//Día Paso a la Inmortalidad del General Manuel Belgrano
+ 	<feriado><anio>2016</anio><mes>6</mes><dia>9</dia></feriado>		//Día de la Independencia
+ 	<feriado><anio>2016</anio><mes>7</mes><dia>15</dia></feriado>	//Paso a la Inmortalidad del Gral. José de San Martín
+ 	<feriado><anio>2016</anio><mes>9</mes><dia>10</dia></feriado>	//Día del respeto a la diversidad cultural
+ 	<feriado><anio>2016</anio><mes>10</mes><dia>28</dia></feriado>	//Día de la soberanía Nacional
+ 	<feriado><anio>2016</anio><mes>11</mes><dia>8</dia></feriado>	//Inmaculada concepción de María
+ 	<feriado><anio>2016</anio><mes>11</mes><dia>9</dia></feriado>	//Puente turístico
+ 	<feriado><anio>2016</anio><mes>11</mes><dia>25</dia></feriado>	//Navidad
+ 	</root>
