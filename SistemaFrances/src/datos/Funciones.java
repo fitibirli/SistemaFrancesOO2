@@ -77,7 +77,7 @@ public class Funciones {
 		return mesEnLetra[traerNroMes(fecha)];
 	}
 	
-	//AÑO
+	//AÃ‘O
 	public static String traerAnio(GregorianCalendar fecha){
 		return String.valueOf(traerNroAnio(fecha));
 	}
@@ -137,7 +137,7 @@ public class Funciones {
 		return (traerNroAnio(f)==traerNroAnio(fecha));
 	}
 	//Menores
-	/*Para años con diferencias menores que 1, ej:2015 y 2014, retorna true*/
+	/*Para aÃ±os con diferencias menores que 1, ej:2015 y 2014, retorna true*/
 	public static boolean diferenciaAnioDeUno(GregorianCalendar f, GregorianCalendar fecha){
 		return (traerNroAnio(f)-traerNroAnio(fecha)==1);
 	}
@@ -284,7 +284,7 @@ public class Funciones {
 		
 		public static boolean comprobarCaracter(String cadena)
 		{
-			//Para comprobar que todos los caracteres de las cadenas sean numeros o letras válidas
+			//Para comprobar que todos los caracteres de las cadenas sean numeros o letras vÃ¡lidas
 			int i=0;
 			boolean respuesta = true;
 			while(i<cadena.length())
@@ -406,7 +406,7 @@ public class Funciones {
 			List<GregorianCalendar> feriados = new ArrayList<GregorianCalendar>();
 			try {
 
-			File dirBase = new File("src/modelo/feriados.xml");
+			File dirBase = new File("src/datos/feriados.xml");
 			String ruta = dirBase.getAbsolutePath();
 			BufferedReader br = new BufferedReader(new FileReader(ruta));
 			String entrada;
