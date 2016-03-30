@@ -100,7 +100,7 @@ public class Prestamo {
 		// No tengo muy claro los calculos del PDF
 		  
 
-		double saldoPendiente = 0;
+		double saldoPendiente = this.monto;
 		double amortizacion = 0;
 		double interesCuota = 0;
 		double cuotaDouble = 0;
@@ -109,13 +109,9 @@ public class Prestamo {
 		for (int i = 0; i < this.cantCuotas; i++) {
 			
 			Cuota cuota = new Cuota();
+				
+			cuota.setSaldoPendiente(saldoPendiente);
 			
-			if(i == 0){
-				
-				saldoPendiente = this.monto;
-				
-			}
-	 		
 			double a = Math.pow((1 + (this.interes/100)), this.cantCuotas-i);
 			
 			amortizacion = Funciones.aproximar2Decimal((saldoPendiente*this.interes/100)/(a-1)); 
@@ -127,9 +123,7 @@ public class Prestamo {
 			deuda = Funciones.aproximar2Decimal(saldoPendiente - amortizacion);
 			
 			saldoPendiente = Funciones.aproximar2Decimal(saldoPendiente - amortizacion);
-	
 					
-			cuota.setSaldoPendiente(saldoPendiente);
 			
 			cuota.setAmortizacion(amortizacion);
 			
