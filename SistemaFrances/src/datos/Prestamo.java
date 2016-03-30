@@ -115,16 +115,20 @@ public class Prestamo {
 				saldoPendiente = this.monto;
 				
 			}
-	 					
-			amortizacion = (saldoPendiente*this.interes)/(Math.pow((1 + this.interes), this.cantCuotas-i)-1); 
-				
-			interesCuota = saldoPendiente*this.interes; 
-				
-			cuotaDouble = amortizacion + interesCuota;
-				
-			deuda = saldoPendiente - amortizacion;
+	 		
+			double a = Math.pow((1 + (this.interes/100)), this.cantCuotas-i);
 			
+			amortizacion = Funciones.aproximar2Decimal((saldoPendiente*this.interes/100)/(a-1)); 
+				
+			interesCuota = Funciones.aproximar2Decimal(saldoPendiente*this.interes/100); 
+				
+			cuotaDouble = Funciones.aproximar2Decimal(amortizacion + interesCuota);
+				
+			deuda = Funciones.aproximar2Decimal(saldoPendiente - amortizacion);
 			
+			saldoPendiente = Funciones.aproximar2Decimal(saldoPendiente - amortizacion);
+	
+					
 			cuota.setSaldoPendiente(saldoPendiente);
 			
 			cuota.setAmortizacion(amortizacion);
