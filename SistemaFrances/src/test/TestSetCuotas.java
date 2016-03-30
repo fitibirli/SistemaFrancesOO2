@@ -26,20 +26,28 @@ public class TestSetCuotas {
 		System.out.println("----> TraerCliente idCliente=" + cliente2.getIdCliente());
 
 		System.out.println(cliente2.toString());
+		
+		System.out.println("");
 
 		Prestamo p = new Prestamo(new GregorianCalendar(2016,01,25), 5000, 10, 6, cliente);
 		
-		p.setCuotas();
+		cliente.addPrestamo(p);
 		
 		System.out.println("*** Imprimir Prestamo y cuotas a pagar ****");
 		
-		System.out.println("Prestamo: $" + p.getMonto());
 		
-		for (Cuota cuota : p.getCuotas()) {
-			
-			System.out.println(cuota.toString());
+		System.out.println(p.toString());
+		
+		
+		
+		for (Prestamo prestamo : cliente.getPrestamos()) {
+			for (Cuota cuota : prestamo.getCuotas()) {
+				System.out.println(cuota.toString());
+			}
 		}
 		
+	
+	
 	
 	}
 

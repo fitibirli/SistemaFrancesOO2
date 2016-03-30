@@ -26,6 +26,7 @@ public class Prestamo {
 		this.interes = interes;
 		this.cantCuotas = cantCuotas;
 		this.cliente = cliente;
+		this.setCuotas();
 	}
 
 
@@ -94,85 +95,56 @@ public class Prestamo {
 	}
 
 
-	public void setCuotas(List<Cuota> cuotas) {
-		this.cuotas = cuotas;
-	}
-
-
 	public void setCuotas(){
 		
-		/** No tengo muy claro los calculos del PDF
-		 * 
-		for (int i = 1; i <= this.cantCuotas; i++) {
+		// No tengo muy claro los calculos del PDF
+		  
+
+		double saldoPendiente = 0;
+		double amortizacion = 0;
+		double interesCuota = 0;
+		double cuotaDouble = 0;
+		double deuda = 0;
+		
+		for (int i = 0; i < this.cantCuotas; i++) {
 			
 			Cuota cuota = new Cuota();
 			
-			double saldoPendiente = 0;
-			double amortizacion = 0;
-			double interes = 0;
-			double cuotaDouble = 0;
-			double deuda = 0;
-			
-			if(i == 1){
+			if(i == 0){
 				
 				saldoPendiente = this.monto;
 				
-				amortizacion = (saldoPendiente*this.interes)/(Math.pow((1 + this.interes), i)-1); 
-				
-				interes = saldoPendiente*(this.interes/100); 
-				
-				cuotaDouble = amortizacion + interes;
-				
-				deuda = saldoPendiente - amortizacion;
-				
-			}else{
-	 					
-				cuotaDouble = amortizacion + interes;
-				
-				deuda = saldoPendiente - amortizacion;
-
 			}
+	 					
+			amortizacion = (saldoPendiente*this.interes)/(Math.pow((1 + this.interes), this.cantCuotas-i)-1); 
+				
+			interesCuota = saldoPendiente*this.interes; 
+				
+			cuotaDouble = amortizacion + interesCuota;
+				
+			deuda = saldoPendiente - amortizacion;
 			
 			
 			cuota.setSaldoPendiente(saldoPendiente);
 			
 			cuota.setAmortizacion(amortizacion);
 			
-			cuota.setInteresCuota(interes);
+			cuota.setInteresCuota(interesCuota);
 			
 			cuota.setCuota(cuotaDouble);
 			
 			cuota.setDeuda(deuda);
 			
 			this.cuotas.add(cuota);
-			
-		
-		  if(i == 1){
-				cuota.setSaldoPendiente(this.monto); 
-				
-				cuota.setAmortizacion((cuota.getSaldoPendiente()*this.interes)/(Math.pow((1 + this.interes), i)-1)); 
-				
-				cuota.setInteresCuota(cuota.getSaldoPendiente()*this.interes); 
-				
-				cuota.setCuota(cuota.getAmortizacion() + cuota.getInteresCuota());
-				
-				cuota.setDeuda(cuota.getSaldoPendiente() - cuota.getAmortizacion());
-				
-			}else{
-				cuota.setAmortizacion((cuota.getSaldoPendiente()*this.interes)/(Math.pow((1 + this.interes), (i-1))-1));
-				
-				cuota.setInteresCuota(cuota.getSaldoPendiente()*this.interes);
-				
-				cuota.setCuota(cuota.getAmortizacion() + cuota.getInteresCuota());
-				
-				cuota.setDeuda(cuota.getSaldoPendiente() - cuota.getAmortizacion());
-				
-				cuota.setSaldoPendiente(cuota.getSaldoPendiente() - cuota.getAmortizacion());
-			}
-	
+
 		}
 			 
-	**/
 	}		
 	
+	
+	@Override
+	public String toString() {
+		
+		return "Prestamo: $" + this.monto + "\nFecha: " + /**this.fecha + */ "\nInteres: " + this.interes + "\nCant.de Cuotas: " + this.cantCuotas + "\n" + this.cliente.toString();
+	}
 }

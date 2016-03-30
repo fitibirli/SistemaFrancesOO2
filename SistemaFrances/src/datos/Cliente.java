@@ -1,5 +1,6 @@
 package datos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
@@ -8,7 +9,7 @@ public class Cliente {
 	private String apellido;
 	private String nombre;
 	private long dni;
-	private List<Prestamo> prestamos;
+	private List<Prestamo> prestamos = new ArrayList<Prestamo>();
 	
 	
 	
@@ -43,6 +44,14 @@ public class Cliente {
 		this.prestamos = prestamos;
 	}
 
+	
+	public void addPrestamo(Prestamo p){
+		
+		if(p != null){
+			prestamos.add(p);
+		}
+		
+	}
 
 	@Override
 	public String toString() {
