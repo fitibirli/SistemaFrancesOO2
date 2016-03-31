@@ -29,7 +29,7 @@ public class TestSetCuotas {
 		
 		System.out.println("");
 
-		Prestamo p = new Prestamo(new GregorianCalendar(2016,01,25), 5000, 10, 6, cliente);
+		Prestamo p = new Prestamo(new GregorianCalendar(2016, 0, 8), 5000, 10, 6, cliente);
 		
 		cliente.addPrestamo(p);
 		
@@ -37,7 +37,6 @@ public class TestSetCuotas {
 		
 		
 		System.out.println(p.toString());
-		
 		
 		
 		for (Prestamo prestamo : cliente.getPrestamos()) {

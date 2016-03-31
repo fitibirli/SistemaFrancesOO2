@@ -61,6 +61,6 @@ public class Cuota {
 	@Override
 	public String toString() {
 		
-		return "F.Vto: " + this.getFechaVencimiento() + " Saldo Pendiente: " + this.getSaldoPendiente() + " Amortizacion: " + this.getAmortizacion() + " Interes: " + this.getInteresCuota() + " Cuota: " + this.getCuota() + " Deuda " + this.deuda;
+		return "F.Vto: " + Funciones.traerFechaCorta(this.getFechaVencimiento()) + " Saldo Pendiente: " + this.getSaldoPendiente() + " Amortizacion: " + this.getAmortizacion() + " Interes: " + this.getInteresCuota() + " Cuota: " + this.getCuota() + " Deuda " + this.deuda;
 	}
 }

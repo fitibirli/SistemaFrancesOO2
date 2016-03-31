@@ -1,6 +1,7 @@
 package datos;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -105,11 +106,16 @@ public class Prestamo {
 		double interesCuota = 0;
 		double cuotaDouble = 0;
 		double deuda = 0;
+		GregorianCalendar fechaVencimiento = this.fecha;
 		
 		for (int i = 0; i < this.cantCuotas; i++) {
 			
 			Cuota cuota = new Cuota();
-				
+			
+			cuota.setFechaVencimiento(calcularVencimientoCuota(fechaVencimiento));
+			
+			fechaVencimiento.add(Calendar.MONTH, 1);
+			
 			cuota.setSaldoPendiente(saldoPendiente);
 			
 			double a = Math.pow((1 + (this.interes/100)), this.cantCuotas-i);
@@ -137,12 +143,25 @@ public class Prestamo {
 
 		}
 			 
-	}		
+	}
+	
+	private GregorianCalendar calcularVencimientoCuota(GregorianCalendar fechaActual){
+		
+		GregorianCalendar fechaVto = new GregorianCalendar();
+		fechaVto.setTime(fechaActual.getTime());
+		fechaVto.add(Calendar.MONTH, 1);
+		
+		if(!Funciones.esHabil(fechaVto)){
+			fechaVto = Funciones.traerPrimerDiaHabil(fechaVto);
+		}
+		
+		return fechaVto;
+	}
 	
 	
 	@Override
 	public String toString() {
 		
-		return "Prestamo: $" + this.monto + "\nFecha: " + /**this.fecha + */ "\nInteres: " + this.interes + "\nCant.de Cuotas: " + this.cantCuotas + "\n" + this.cliente.toString();
+		return "Prestamo: $" + this.monto + "\nFecha: " + Funciones.traerFechaCorta(this.fecha) + "\nInteres: " + this.interes + "\nCant.de Cuotas: " + this.cantCuotas + "\n" + this.cliente.toString();
 	}
 }
