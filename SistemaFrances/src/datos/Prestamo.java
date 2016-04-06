@@ -98,15 +98,14 @@ public class Prestamo {
 
 	public void setCuotas(){
 		
-		// No tengo muy claro los calculos del PDF
-		  
-
 		double saldoPendiente = this.monto;
 		double amortizacion = 0;
 		double interesCuota = 0;
 		double cuotaDouble = 0;
 		double deuda = 0;
-		GregorianCalendar fechaVencimiento = this.fecha;
+		
+		GregorianCalendar fechaVencimiento = new GregorianCalendar();
+		fechaVencimiento.setTime(this.fecha.getTime());
 		
 		for (int i = 0; i < this.cantCuotas; i++) {
 			
